@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 280px;
+  background: #f5f6f8;
+  color: #202532;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button, input:not([type='checkbox']) {
+  border: 1px solid #a5acb9;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+button {
+  background: #fff;
+  color: inherit;
+}
+
+button:hover {
+  background: #e8edf5;
+}
+
+:focus-visible {
+  outline: 3px solid #2667c9;
+  outline-offset: 3px;
+}
+
+.app {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.8rem;
+}
+
+.task-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.task-form-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.task-form-controls input {
+  flex: 1;
+  min-width: 0;
+}
+
+.add-button, .task-filters button[aria-pressed='true'] {
+  background: #244e87;
+  border-color: #244e87;
+  color: #fff;
+}
+
+.add-button:hover, .task-filters button[aria-pressed='true']:hover {
+  background: #193d6e;
+}
+
+.task-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.task-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #d8dce3;
+}
+
+.task-label {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 0;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.task-label input {
+  width: 20px;
+  height: 20px;
+  margin: 3px 0 0;
+  flex-shrink: 0;
+  accent-color: #244e87;
+}
+
+.task-title {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #5c6370;
+}
+
+.delete-button {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  color: #923434;
+}
+
+.empty-message {
+  color: #5c6370;
+}
+
+.warning {
+  padding: 12px;
+  background: #fff2d6;
+  border: 1px solid #b58c36;
+  border-radius: 6px;
+}
+
+@media (max-width: 420px) {
+  .app {
+    margin: 16px auto;
+    padding: 16px;
+  }
+
+  .task-form-controls {
+    flex-direction: column;
+  }
+
+  .task-item {
+    flex-wrap: wrap;
+  }
+
+  .task-label {
+    flex-basis: 100%;
+  }
+
+  .delete-button {
+    margin-left: 30px;
+  }
+}
